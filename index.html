@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Supercar Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: #111;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+    .filter-bar select {
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+    .car-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .car-card {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+    .car-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .car-info {
+      padding: 1rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .car-info h2 {
+      margin: 0 0 0.5rem;
+      font-size: 1.25rem;
+      color: #222;
+    }
+    .car-info p {
+      margin: 0.25rem 0;
+      flex-grow: 1;
+    }
+    .car-info .price {
+      font-weight: bold;
+      color: #e74c3c;
+      margin-top: 0.5rem;
+    }
+    @media (max-width: 600px) {
+      .filter-bar select {
+        min-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Supercars for Sale</h1>
+  </header>
+  <div class="container">
+    <div class="filter-bar">
+      <select>
+        <option selected disabled>Make</option>
+        <option>Ferrari</option>
+        <option>Lamborghini</option>
+        <option>McLaren</option>
+      </select>
+      <select>
+        <option selected disabled>Year</option>
+        <option>2025</option>
+        <option>2024</option>
+        <option>2023</option>
+      </select>
+      <select>
+        <option selected disabled>Price Range</option>
+        <option>-- €1M</option>
+        <option>€1M–€3M</option>
+        <option>€3M+</option>
+      </select>
+    </div>
+    <div class="car-list">
+      <div class="car-card">
+        <img src="https://via.placeholder.com/400x180?text=Ferrari+296+GTB" alt="Ferrari 296 GTB">
+        <div class="car-info">
+          <h2>Ferrari 296 GTB (2023)</h2>
+          <p>Mileage: 97 mi</p>
+          <p class="price">€214,950</p>
+        </div>
+      </div>
+      <div class="car-card">
+        <img src="https://via.placeholder.com/400x180?text=Lamborghini+Revuelto" alt="Lamborghini Revuelto">
+        <div class="car-info">
+          <h2>Lamborghini Revuelto (2024)</h2>
+          <p>Mileage: 1,124 mi</p>
+          <p class="price">€529,995</p>
+        </div>
+      </div>
+      <div class="car-card">
+        <img src="https://via.placeholder.com/400x180?text=Bugatti+Mistral" alt="Bugatti Mistral">
+        <div class="car-info">
+          <h2>Bugatti Mistral</h2>
+          <p>1 of 99</p>
+          <p class="price">€5.95M</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
